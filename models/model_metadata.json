@@ -1,0 +1,31 @@
+{
+  "rows": 2618,
+  "train_rows": 1781,
+  "validation_rows": 315,
+  "test_rows": 522,
+  "image_rows": 2607,
+  "image_cache": "models\\cache\\resnet18_36d0908ffa7d7bbd.npz",
+  "seed": 42,
+  "target_transform": "log1p(price_usd)",
+  "baseline_features": "numeric, city/suburb/property type, top amenities, train-only TF-IDF",
+  "multimodal_architecture": "fixed linear baseline skip + frozen ImageNet ResNet18 image features + learned masked-mean word embeddings + structured MLP branches + trainable multimodal residual fusion MLP",
+  "best_epoch": 26,
+  "baseline_model": "models\\linear_baseline.npz",
+  "multimodal_model": "models\\multimodal_fusion.pt",
+  "metrics": [
+    {
+      "model": "Multimodal ResNet18 + text embeddings + MLP",
+      "MAE_USD": 104521.0078125,
+      "RMSE_USD": 217604.09375,
+      "R2_USD": 0.6239487612688784,
+      "MAE_log": 0.3454288840293884
+    },
+    {
+      "model": "Linear Ridge (structured + TF-IDF)",
+      "MAE_USD": 109676.0703125,
+      "RMSE_USD": 234134.859375,
+      "R2_USD": 0.564643460713127,
+      "MAE_log": 0.35811203718185425
+    }
+  ]
+}

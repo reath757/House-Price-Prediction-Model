@@ -1,0 +1,6 @@
+feature,lower_fence,upper_fence,flagged_count
+price_usd,-350000.0,850000.0,149
+bedrooms,0.0,8.0,24
+bathrooms,0.5,4.5,228
+floor_area_m2,-300.0,980.0,255
+land_area_m2,-4125.0,8075.0,155

@@ -1,0 +1,22 @@
+
+field,description,example
+listing_id,Stable listing identifier used to join property rows to image filenames,259991
+property_url,Source listing URL,https://www.property.co.zw/for-sale/houses-pbox259991
+title,Listing headline,Waterfalls Uplands Property On 1 Acre For Sale Behind Picnic!
+price_text,Asking price as shown by the source,USD 230000
+price_amount,Numeric asking price without currency symbols,230000
+currency,Price currency code when stated by the source,USD
+location_text,Full location string shown by the source,"Waterfalls, Harare South, Harare"
+suburb,First location component,Waterfalls
+city,Parsed city or area component,Harare
+bedrooms,Number of bedrooms,3
+bathrooms,Number of bathrooms,2
+floor_area_m2,Building area in square metres,287.8
+land_area_m2,Land area in square metres,4282
+property_type,Property category shown on the result card,House
+description,Listing description text,House with fitted kitchen and garage
+amenities_json,JSON array of source amenity labels,"[""Garage"",""Garden""]"
+photo_ids_json,JSON array of source photo identifiers,"[""c478e138-03a8-44f1-a62a-b37766eb0371""]"
+photo_urls_json,JSON array of source photo URLs,"[""https://www.property.co.zw/uploadedfiles/example.webp""]"
+photo_paths_json,JSON array of downloaded paths relative to the project root,"[""images/259991_c478e138.webp""]"
+collected_at_utc,UTC timestamp when the listing row was collected,2026-11-22T10:00:00+00:00
