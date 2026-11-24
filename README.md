@@ -1,6 +1,6 @@
 # Zimbabwe House Price Prediction
 
-This project collects public Zimbabwe house-listing data, cleans and explores the listings, and compares a linear baseline with a multimodal price model. Prices are treated as **USD**, including listings whose currency field is blank, based on the project owner's confirmation. These are advertised asking prices, not verified sale prices.
+This project collects public Zimbabwe house-listing data, cleans and explores the listings, and compares a linear baseline with a multimodal price model. Prices are treated as **USD**, including listings whose currency field is blank, where the source price text is also USD-denominated. These are advertised asking prices, not verified sale prices.
 
 ## Project contents
 

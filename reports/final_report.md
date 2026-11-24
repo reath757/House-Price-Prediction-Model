@@ -1,14 +1,14 @@
 # Zimbabwe House Price Prediction: Short Report
 
-**Data snapshot:** 22 November 2026  
-**Currency:** USD asking prices  
-**Purpose:** exploratory analysis and a held-out comparison of house-price models
+**Data snapshot:** 22 November 2026
+**Currency:** USD asking prices
+**Purpose:** Exploratory analysis and a held-out comparison of house-price models
 
 ## 1. Data and preparation
 
 The project collected public house listings from [Property.co.zw](https://www.property.co.zw/) using `src/scrape_listings.py`. The source CSV contains 2,646 listings and the `images/` directory contains 2,631 WebP photos. Photo filename prefixes map to listing IDs in `data/houses.csv`; one legacy prefix is zero-padded (`0282` for listing ID `282`). Fifteen source listings have no matching local photo.
 
-The cleaning workflow removed 11 repeated listing URLs, leaving 2,635 unique listings. The owner confirmed that prices are USD, so blank currency labels were treated as USD and this assumption is recorded in the cleaning notebook. Seventeen listings lacked a usable positive price and were excluded from modeling, leaving 2,618 eligible listings. Missing property attributes were imputed within model preprocessing; extreme values were flagged for review rather than automatically removed. The target was transformed with `log1p` during fitting to reduce the influence of the long right tail.
+The cleaning workflow removed 11 repeated listing URLs, leaving 2,635 unique listings. Because the source price text is USD-denominated, blank currency labels were treated as USD and this assumption is recorded in the cleaning notebook. Seventeen listings lacked a usable positive price and were excluded from modeling, leaving 2,618 eligible listings. Missing property attributes were imputed within model preprocessing; extreme values were flagged for review rather than automatically removed. The target was transformed with `log1p` during fitting to reduce the influence of the long right tail.
 
 ## 2. Exploratory findings
 
